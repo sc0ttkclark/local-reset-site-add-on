@@ -2,6 +2,8 @@
 
 This [Local addon](https://localwp.com) gives you two new tools that help you blow your test sites up.
 
+Screencast example: https://share.skc.dev/Blu5wEyE
+
 ## Empty Site
 
 This tool will empty all content (posts, comments, terms, and meta) for the site including uploaded files.

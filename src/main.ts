@@ -13,7 +13,9 @@ export default function (context) {
 
         // Run WP-CLI command.
         await LocalMain.getServiceContainer().cradle.wpCli.run(site, [
-            'db reset --yes',
+            'db',
+            'reset',
+            '--yes',
         ]).then(function (result) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp db reset" finished.');
             LocalMain.getServiceContainer().cradle.localLogger.log('info', result);
@@ -35,7 +37,10 @@ export default function (context) {
 
         // Run WP-CLI command.
         await LocalMain.getServiceContainer().cradle.wpCli.run(site, [
-            'site empty --uploads --yes',
+            'site',
+            'empty',
+            '--uploads',
+            '--yes',
         ]).then(function (result) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp site empty" finished.');
             LocalMain.getServiceContainer().cradle.localLogger.log('info', result);
