@@ -2,6 +2,8 @@
 
 This [Local addon](https://localwp.com) gives you two new tools that help you blow your test sites up.
 
+![Screenshot of interface within Site](screenshot.png)
+
 Screencast example: https://share.skc.dev/Blu5wEyE
 
 ## Empty Site
