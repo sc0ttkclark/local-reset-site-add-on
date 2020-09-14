@@ -178,6 +178,10 @@ export default class Boilerplate extends Component {
 			return true;
 		}
 
+		if ( 'running' !== this.props.siteStatuses[ this.state.siteId ] ) {
+			return true;
+		}
+
 		return false;
 	}
 
