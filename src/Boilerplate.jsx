@@ -100,7 +100,7 @@ export default class Boilerplate extends Component {
 
 		return (
 			<Text margin="m">
-				This site has been reset successfully.
+				This site has been reset successfully. Use admin/admin to log in.
 			</Text>
 		);
 	}

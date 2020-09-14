@@ -20,7 +20,27 @@ export default function (context) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp db reset" finished.');
             LocalMain.getServiceContainer().cradle.localLogger.log('info', result);
 
-            LocalMain.sendIPCEvent('site-reset');
+            // Run WP-CLI command.
+            LocalMain.getServiceContainer().cradle.wpCli.run(site, [
+                'core',
+                'install',
+                '--url=' + site.url,
+                '--title=' + site.domain,
+                '--admin_user=admin',
+                '--admin_password=admin',
+                '--admin_email=dev-email@flywheel.local',
+                '--skip-email',
+            ]).then(function (result) {
+                LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp core install" finished.');
+                LocalMain.getServiceContainer().cradle.localLogger.log('info', result);
+
+                LocalMain.sendIPCEvent('site-reset');
+            }, function (err) {
+                LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp core install" failed.');
+                LocalMain.getServiceContainer().cradle.localLogger.log('info', err);
+
+                LocalMain.sendIPCEvent('site-reset-failed');
+            });
         }, function (err) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp db reset" failed.');
             LocalMain.getServiceContainer().cradle.localLogger.log('info', err);
