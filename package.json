@@ -1,23 +1,23 @@
 {
-  "name": "reset-site-addon",
+  "name": "local-reset-site-addon",
   "productName": "Reset Site Addon",
   "version": "1.0.0",
-  "author": "Local Team",
+  "author": "Scott Kingsley Clark",
   "keywords": [
     "local-addon"
   ],
   "bgColor": "#51bb7b",
   "icon": "icon.svg",
-  "slug": "reset-site-addon",
-  "description": "A quick start to your amazing addon!",
+  "slug": "local-reset-site-addon",
+  "description": "Addon to Reset Sites in Local",
   "renderer": "lib/renderer.js",
   "main": "lib/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/getflywheel/local-addon-boilerplate"
+    "url": "https://github.com/sc0ttkclark/local-reset-site-addon"
   },
   "bugs": {
-    "url": "https://github.com/getflywheel/local-addon-boilerplate/issues"
+    "url": "https://github.com/sc0ttkclark/local-reset-site-addon/issues"
   },
   "license": "MIT",
   "scripts": {
