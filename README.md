@@ -14,7 +14,9 @@ This leaves options in place and does not deactivate plugins.
 
 ## Reset Site
 
-This tool will reset the site database.
+This tool will delete the entire site database and reinstall WordPress.
+
+_Note: An "admin" user will be setup with the password "admin"._
 
 ## Installation
 

@@ -206,7 +206,8 @@ export default class Boilerplate extends Component {
 					{this.showResetFailedText()}
 
 					<Text tag="div" margin="l">
-						This tool will reset the site database.
+						This tool will reset the site database and reinstall WordPress.
+						Note: An "admin" user will be setup with the password "admin".
 					</Text>
 				</TableListRow>
 			</TableList>
