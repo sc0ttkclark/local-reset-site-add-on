@@ -1,8 +1,8 @@
 {
   "name": "local-reset-site-addon",
   "productName": "Reset Site Addon",
-  "version": "1.0.2",
-  "author": "Scott Kingsley Clark",
+  "version": "1.0.3",
+  "author": "Modern Tribe, Inc",
   "keywords": [
     "local-addon"
   ],
@@ -14,10 +14,10 @@
   "main": "lib/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sc0ttkclark/local-reset-site-addon"
+    "url": "https://github.com/moderntribe/local-reset-site-addon"
   },
   "bugs": {
-    "url": "https://github.com/sc0ttkclark/local-reset-site-addon/issues"
+    "url": "https://github.com/moderntribe/local-reset-site-addon/issues"
   },
   "license": "MIT",
   "scripts": {

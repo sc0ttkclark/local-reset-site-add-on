@@ -5,7 +5,7 @@ export default function (context) {
     const {electron} = context;
     const {ipcMain} = electron;
 
-    ipcMain.on('skc-reset-site', async (event, siteId) => {
+    ipcMain.on('tribe-reset-site', async (event, siteId) => {
         LocalMain.getServiceContainer().cradle.localLogger.log('info', `Resetting site ${siteId}.`);
 
         // Get site object.
@@ -32,22 +32,22 @@ export default function (context) {
             ]).then(function (result) {
                 LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp core install" finished.');
 
-                LocalMain.sendIPCEvent('skc-site-reset');
+                LocalMain.sendIPCEvent('tribe-site-reset');
             }, function (err) {
                 LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp core install" failed.');
                 LocalMain.getServiceContainer().cradle.localLogger.log('info', err);
 
-                LocalMain.sendIPCEvent('skc-site-reset-install-failed');
+                LocalMain.sendIPCEvent('tribe-site-reset-install-failed');
             });
         }, function (err) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp db reset" failed.');
             LocalMain.getServiceContainer().cradle.localLogger.log('info', err);
 
-            LocalMain.sendIPCEvent('skc-site-reset-failed');
+            LocalMain.sendIPCEvent('tribe-site-reset-failed');
         });
     });
 
-    ipcMain.on('skc-empty-site', async (event, siteId) => {
+    ipcMain.on('tribe-empty-site', async (event, siteId) => {
         LocalMain.getServiceContainer().cradle.localLogger.log('info', `Emptying site ${siteId}.`);
 
         // Get site object.
@@ -62,12 +62,12 @@ export default function (context) {
         ]).then(function (result) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp site empty" finished.');
 
-            LocalMain.sendIPCEvent('skc-site-emptied');
+            LocalMain.sendIPCEvent('tribe-site-emptied');
         }, function (err) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp site empty" failed.');
             LocalMain.getServiceContainer().cradle.localLogger.log('info', err);
 
-            LocalMain.sendIPCEvent('skc-site-empty-failed');
+            LocalMain.sendIPCEvent('tribe-site-empty-failed');
         });
     });
 }

@@ -20,28 +20,28 @@ export default class Boilerplate extends Component {
 	}
 
 	componentDidMount() {
-		ipcRenderer.on('skc-site-reset', (event) => {
+		ipcRenderer.on('tribe-site-reset', (event) => {
 			this.setState({
 				message: 'site-reset',
 			});
 		});
-		ipcRenderer.on('skc-site-reset-failed', (event) => {
+		ipcRenderer.on('tribe-site-reset-failed', (event) => {
 			this.setState({
 				message: 'site-reset-failed',
 			});
 		});
-		ipcRenderer.on('skc-site-reset-install-failed', (event) => {
+		ipcRenderer.on('tribe-site-reset-install-failed', (event) => {
 			this.setState({
 				message: 'site-reset-install-failed',
 			});
 		});
-		ipcRenderer.on('skc-site-emptied', (event) => {
+		ipcRenderer.on('tribe-site-emptied', (event) => {
 			console.log( event );
 			this.setState({
 				message: 'site-emptied',
 			});
 		});
-		ipcRenderer.on('skc-site-empty-failed', (event) => {
+		ipcRenderer.on('tribe-site-empty-failed', (event) => {
 			console.log( event );
 			this.setState({
 				message: 'site-empty-failed',
@@ -50,13 +50,13 @@ export default class Boilerplate extends Component {
 	}
 
 	componentWillUnmount() {
-		ipcRenderer.removeAllListeners('skc-site-resetting');
-		ipcRenderer.removeAllListeners('skc-site-reset');
-		ipcRenderer.removeAllListeners('skc-site-reset-failed');
-		ipcRenderer.removeAllListeners('skc-site-reset-install-failed');
-		ipcRenderer.removeAllListeners('skc-site-emptying');
-		ipcRenderer.removeAllListeners('skc-site-emptied');
-		ipcRenderer.removeAllListeners('skc-site-empty-failed');
+		ipcRenderer.removeAllListeners('tribe-site-resetting');
+		ipcRenderer.removeAllListeners('tribe-site-reset');
+		ipcRenderer.removeAllListeners('tribe-site-reset-failed');
+		ipcRenderer.removeAllListeners('tribe-site-reset-install-failed');
+		ipcRenderer.removeAllListeners('tribe-site-emptying');
+		ipcRenderer.removeAllListeners('tribe-site-emptied');
+		ipcRenderer.removeAllListeners('tribe-site-empty-failed');
 	}
 
 	resetSite() {
@@ -65,7 +65,7 @@ export default class Boilerplate extends Component {
 		});
 
 		ipcRenderer.send(
-			'skc-reset-site',
+			'tribe-reset-site',
 			this.state.siteId,
 		);
 	}
@@ -99,7 +99,7 @@ export default class Boilerplate extends Component {
 		});
 
 		ipcRenderer.send(
-			'skc-empty-site',
+			'tribe-empty-site',
 			this.state.siteId,
 		);
 	}
