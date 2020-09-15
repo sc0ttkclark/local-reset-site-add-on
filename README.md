@@ -23,7 +23,6 @@ _Note: An "admin" user will be setup with the password "admin"._
 ### Requirements
 
 * [Local](https://localwp.com/) 5.x ⚡️
-* yarn or npm
 
 ### Option 1: Fast and easy install
 
