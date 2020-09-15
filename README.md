@@ -20,6 +20,11 @@ _Note: An "admin" user will be setup with the password "admin"._
 
 ## Installation
 
+### Requirements
+
+* [Local](https://localwp.com/) 5.x ⚡️
+* yarn or npm
+
 ### Clone
 
 Clone the repository into the following directory depending on your platform:
