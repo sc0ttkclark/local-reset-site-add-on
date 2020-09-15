@@ -4,7 +4,7 @@ This [Local addon](https://localwp.com) gives you two new tools that help you bl
 
 ![Screenshot of interface within Site](screenshot.png)
 
-Screencast example: https://share.skc.dev/Blu5wEyE
+Screencast example: https://share.skc.dev/bLuR9gg6
 
 ## Empty Site
 
