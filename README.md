@@ -25,7 +25,14 @@ _Note: An "admin" user will be setup with the password "admin"._
 * [Local](https://localwp.com/) 5.x ⚡️
 * yarn or npm
 
-### Clone
+### Option 1: Fast and easy install
+
+1. Download the pre-packaged zip on the latest release, this is not the source code but the package attached.
+2. Unzip the code to the associated directory for your OS (see [Clone](#clone))
+
+### Option 2: Clone and Build
+
+#### Clone
 
 Clone the repository into the following directory depending on your platform:
 
@@ -33,11 +40,11 @@ Clone the repository into the following directory depending on your platform:
 -   Windows: `C:\Users\username\AppData\Roaming\Local\addons`
 -   Debian Linux: `~/.config/Local/addons`
 
-### Install Add-on Dependencies
+#### Install Add-on Dependencies
 
 `yarn install` or `npm install`
 
-### Add Add-on to Local
+#### Add Add-on to Local
 
 1. Clone repo directly into the add-ons folder (paths described above)
 2. `yarn install` or `npm install` (install dependencies)
