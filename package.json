@@ -1,7 +1,7 @@
 {
   "name": "local-reset-site-addon",
   "productName": "Reset Site Addon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Modern Tribe, Inc",
   "keywords": [
     "local-addon"
@@ -27,14 +27,14 @@
   },
   "devDependencies": {
     "@getflywheel/eslint-config-local": "1.0.4",
-    "@getflywheel/local": "^5.0.0",
-    "@types/classnames": "^2.2.9",
+    "@getflywheel/local": "^5.7.5",
+    "@types/classnames": "^2.2.10",
     "@types/dateformat": "^3.0.1",
-    "@types/node": "^12.7.12",
+    "@types/node": "^12.12.62",
     "eslint": "^5.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-react": "^7.11.1",
-    "typescript": "^3.6.4"
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.20.6",
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
     "react": ">= 16.4.0",
@@ -42,14 +42,14 @@
     "react-router-dom": "^4.3.1"
   },
   "dependencies": {
-    "@getflywheel/local-components": "^14.0.0",
+    "@getflywheel/local-components": "^14.2.0",
     "classnames": "^2.2.6",
     "dateformat": "^3.0.3",
     "fs-extra": "^9.0.1",
     "prop-types": "^15.6.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-router-dom": "^5.1.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "bundledDependencies": [
     "classnames",

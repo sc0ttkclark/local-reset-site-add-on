@@ -17,7 +17,9 @@ export default function ( context ) {
 	// Add menu option within the site menu bar
 	hooks.addFilter( 'siteInfoMoreMenu', function ( menu, site ) {
 		menu.push( {
-			label : 'Reset Site', enabled : true, click : () => {
+			label : 'Reset Site',
+			enabled : true,
+			click : () => {
 				context.events.send( 'goToRoute', `/main/site-info/${site.id}/${addonID}` );
 			}
 		} );
