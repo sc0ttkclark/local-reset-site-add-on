@@ -5,7 +5,7 @@ import {ipcRenderer} from 'electron';
 // https://github.com/getflywheel/local-components
 import {LoadingIndicator, TableList, TableListRow, Text, TextButton} from '@getflywheel/local-components';
 
-export default class Boilerplate extends Component {
+export default class Addon extends Component {
 	constructor(props) {
 		super(props);
 
@@ -141,8 +141,8 @@ export default class Boilerplate extends Component {
 
 	render() {
 		return (
-			<TableList>
-				<TableListRow label="Empty Site">
+			<TableList key="tribe-reset-site-tools">
+				<TableListRow key="tribe-empty-site" label="Empty Site">
 					{this.showEmptyButton()}
 					{this.showEmptyText()}
 
@@ -151,7 +151,7 @@ export default class Boilerplate extends Component {
 						This leaves options in place and does not deactivate plugins.
 					</Text>
 				</TableListRow>
-				<TableListRow label="Reset Site">
+				<TableListRow key="tribe-reset-site" label="Reset Site">
 					{this.showResetButton()}
 					{this.showResetText()}
 
