@@ -16,6 +16,7 @@ export default function (context) {
             'db',
             'reset',
             '--yes',
+            '--defaults',
         ]).then(function (result) {
             LocalMain.getServiceContainer().cradle.localLogger.log('info', 'Command "wp db reset" finished.');
 
