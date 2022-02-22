@@ -1,23 +1,23 @@
 {
-    "name": "local-reset-site-addon",
-    "productName": "Reset Site Addon",
-    "version": "1.0.4",
-    "author": "Modern Tribe, Inc",
+    "name": "local-reset-site-add-on",
+    "productName": "Reset Site Add-on",
+    "version": "1.0.5",
+    "author": "Scott Kingsley Clark, Modern Tribe, Inc",
     "keywords": [
         "local-addon"
     ],
     "bgColor": "#51bb7b",
     "icon": "icon.svg",
-    "slug": "local-reset-site-addon",
-    "description": "Addon to Reset Sites in Local",
+    "slug": "local-reset-site-add-on",
+    "description": "Add-on to Reset Sites in Local",
     "renderer": "lib/renderer.js",
     "main": "lib/main.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/moderntribe/local-reset-site-addon"
+        "url": "https://github.com/sc0ttkclark/local-reset-site-add-on"
     },
     "bugs": {
-        "url": "https://github.com/moderntribe/local-reset-site-addon/issues"
+        "url": "https://github.com/sc0ttkclark/local-reset-site-add-on/issues"
     },
     "license": "MIT",
     "scripts": {
@@ -70,6 +70,6 @@
         "react-router-dom"
     ],
     "engines": {
-        "local-by-flywheel": "^5.0.0"
+        "local-by-flywheel": "^6.0.0"
     }
 }

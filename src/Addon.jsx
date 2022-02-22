@@ -20,28 +20,28 @@ export default class Addon extends Component {
 	}
 
 	componentDidMount() {
-		ipcRenderer.on('tribe-site-reset', (event) => {
+		ipcRenderer.on('skc-local-reset-add-on-site-reset', (event) => {
 			this.setState({
 				message: 'site-reset',
 			});
 		});
-		ipcRenderer.on('tribe-site-reset-failed', (event) => {
+		ipcRenderer.on('skc-local-reset-add-on-site-reset-failed', (event) => {
 			this.setState({
 				message: 'site-reset-failed',
 			});
 		});
-		ipcRenderer.on('tribe-site-reset-install-failed', (event) => {
+		ipcRenderer.on('skc-local-reset-add-on-site-reset-install-failed', (event) => {
 			this.setState({
 				message: 'site-reset-install-failed',
 			});
 		});
-		ipcRenderer.on('tribe-site-emptied', (event) => {
+		ipcRenderer.on('skc-local-reset-add-on-site-emptied', (event) => {
 			console.log( event );
 			this.setState({
 				message: 'site-emptied',
 			});
 		});
-		ipcRenderer.on('tribe-site-empty-failed', (event) => {
+		ipcRenderer.on('skc-local-reset-add-on-site-empty-failed', (event) => {
 			console.log( event );
 			this.setState({
 				message: 'site-empty-failed',
@@ -50,13 +50,13 @@ export default class Addon extends Component {
 	}
 
 	componentWillUnmount() {
-		ipcRenderer.removeAllListeners('tribe-site-resetting');
-		ipcRenderer.removeAllListeners('tribe-site-reset');
-		ipcRenderer.removeAllListeners('tribe-site-reset-failed');
-		ipcRenderer.removeAllListeners('tribe-site-reset-install-failed');
-		ipcRenderer.removeAllListeners('tribe-site-emptying');
-		ipcRenderer.removeAllListeners('tribe-site-emptied');
-		ipcRenderer.removeAllListeners('tribe-site-empty-failed');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-resetting');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-reset');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-reset-failed');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-reset-install-failed');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-emptying');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-emptied');
+		ipcRenderer.removeAllListeners('skc-local-reset-add-on-site-empty-failed');
 	}
 
 	resetSite() {
@@ -65,7 +65,7 @@ export default class Addon extends Component {
 		});
 
 		ipcRenderer.send(
-			'tribe-reset-site',
+			'skc-local-reset-add-on-reset-site',
 			this.state.siteId,
 		);
 	}
@@ -99,7 +99,7 @@ export default class Addon extends Component {
 		});
 
 		ipcRenderer.send(
-			'tribe-empty-site',
+			'skc-local-reset-add-on-empty-site',
 			this.state.siteId,
 		);
 	}
@@ -141,8 +141,8 @@ export default class Addon extends Component {
 
 	render() {
 		return (
-			<TableList key="tribe-reset-site-tools">
-				<TableListRow key="tribe-empty-site" label="Empty Site">
+			<TableList key="skc-local-reset-add-on-reset-site-tools">
+				<TableListRow key="skc-local-reset-add-on-empty-site" label="Empty Site">
 					{this.showEmptyButton()}
 					{this.showEmptyText()}
 
@@ -151,7 +151,7 @@ export default class Addon extends Component {
 						This leaves options in place and does not deactivate plugins.
 					</Text>
 				</TableListRow>
-				<TableListRow key="tribe-reset-site" label="Reset Site">
+				<TableListRow key="skc-local-reset-add-on-reset-site" label="Reset Site">
 					{this.showResetButton()}
 					{this.showResetText()}
 
