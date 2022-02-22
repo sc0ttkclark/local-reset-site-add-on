@@ -1,5 +1,9 @@
 name: 'Auto Build'
 on:
+  push:
+    branches:
+      - main
+      - releases/**
   pull_request:
     paths:
       - '**.json'
