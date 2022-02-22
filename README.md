@@ -1,28 +1,12 @@
-# Local Reset Site Addon
+# Local Reset Site Add-on
 
-This [Local addon](https://localwp.com) gives you two new tools that help you blow your test sites up.
-
-![Screenshot of interface within Site](screenshot.png)
-
-Screencast example: https://share.skc.dev/bLuR9gg6
-
-## Empty Site
-
-This tool will empty all content (posts, comments, terms, and meta) for the site including uploaded files.
-
-This leaves options in place and does not deactivate plugins.
-
-## Reset Site
-
-This tool will delete the entire site database and reinstall WordPress.
-
-_Note: An "admin" user will be setup with the password "admin"._
+This [Local add-on](https://localwp.com) gives you two new tools that help you blow your test sites up 💥.
 
 ## Installation
 
 ### Requirements
 
-* [Local](https://localwp.com/) 5.x ⚡️
+* [Local](https://localwp.com/) 6.3.0+ ⚡️
 
 ### Option 1: Fast and easy install
 
@@ -53,3 +37,25 @@ Clone the repository into the following directory depending on your platform:
 ## License
 
 MIT
+
+## Usage
+
+![Screenshot of interface within Site](screenshot.png)
+
+Screencast example: https://share.skc.dev/bLuR9gg6
+
+### Empty Site
+
+This tool will empty all content (posts, comments, terms, and meta) for the site including attachments.
+
+This leaves options in place and does not deactivate plugins.
+
+What it runs in WP-CLI: `wp site empty --uploads --yes`
+
+### Reset Site
+
+This tool will delete the entire site database and reinstall WordPress.
+
+_Note: An "admin" user will be setup with the password "admin"._
+
+What it runs in WP-CLI: `wp db reset --yes --defaults` and `wp core install --url=site.url --title=site.domain --admin_user=admin --admin_password=admin --admin_email=dev-email@flywheel.local --skip-email`
