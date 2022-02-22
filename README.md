@@ -1,6 +1,6 @@
 # Local Reset Site Add-on
 
-This [Local add-on](https://localwp.com) gives you two new tools that help you blow your test sites up 💥.
+This [Local Add-on](https://localwp.com) gives you two new tools that help you blow your test sites up 💥.
 
 ## Installation
 
